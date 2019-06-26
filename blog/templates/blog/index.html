@@ -1,0 +1,200 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="v-parallax v-bg-stylish v-bg-stylish-v10" id="download" style="background-image: url({% static 'media/wp2024936.jpg' %});">
+      <div class="row center">
+        <ul>
+          <li>
+            <div class="tp-caption v-caption-big-white sfl stl">THE ULTIMATE HOME<br/>TO WORLD's MYSTERIES</div>
+            <div class="tp-caption v-caption-h1 sfl stl">
+              Dive in now.
+            </div>
+            <br/>
+            <div class="tp-caption sfl stl">
+              <a href="{{rnd}}" class="btn v-btn"> READ A RANDOM ARTICLE!</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="v-spacer col-sm-12 v-height-small"></div>
+    </div>
+
+    <!--Categories-->
+           <div class="v-parallax v-bg-stylish v-bg-stylish-v4 no-shadow" id="screenshots">
+               <div class="container">
+                   <div class="row center">
+                       <div class="col-sm-12">
+                           <p class="v-smash-text-large-2x">
+                               <span>Categories</span>
+                           </p>
+                           <div class="horizontal-break"></div>
+                       </div>
+                       <div class="v-spacer col-sm-12 v-height-standard"></div>
+                       <div class="row center">
+                       <div class="responsive">
+                        <div class="gallery">
+                          <a target="_blank" href="{% url 'mysterious-places' %}">
+                            <img src="{% static 'media/categories/mypl.jpg' %}" alt="Mysterious Places" width="600" height="400">
+                          </a>
+                          <div class="desc">Mysterious Places</div>
+                        </div>
+                      </div>
+                      <div class="responsive">
+                       <div class="gallery">
+                         <a target="_blank" href="{% url 'ancient-cities' %}">
+                           <img src="{% static 'media/categories/anpl.jpg' %}" alt="Ancient Cities" width="600" height="400">
+                         </a>
+                         <div class="desc">Ancient Cities</div>
+                       </div>
+                     </div>
+                     <div class="responsive">
+                      <div class="gallery">
+                        <a target="_blank" href="{% url 'legendary-places' %}">
+                          <img src="{% static 'media/categories/leg.jpg' %}" alt="Legendary Places" width="600" height="400">
+                        </a>
+                        <div class="desc">Legendary Places</div>
+                      </div>
+                    </div>
+                    <div class="responsive">
+                     <div class="gallery">
+                       <a target="_blank" href="{% url 'uninhabited-islands' %}">
+                         <img src="{% static 'media/categories/unis.jpg' %}" alt="Uninhabited Islands" width="600" height="400">
+                       </a>
+                       <div class="desc">Uninhabited Islands</div>
+                     </div>
+                   </div>
+                   </div>
+                   <div class="row center">
+                   <div class="responsive">
+                    <div class="gallery">
+                      <a target="_blank" href="{% url 'bizarre-people' %}">
+                        <img src="{% static 'media/categories/bipe.jpg' %}" alt="Bizarre People" width="600" height="400">
+                      </a>
+                      <div class="desc">Bizzare People</div>
+                    </div>
+                  </div>
+                  <div class="responsive">
+                   <div class="gallery">
+                     <a target="_blank" href="{% url 'murders' %}">
+                       <img src="{% static 'media/categories/mur.jpg' %}" alt="Murders" width="600" height="400">
+                     </a>
+                     <div class="desc">Murders</div>
+                   </div>
+                 </div>
+                 <div class="responsive">
+                  <div class="gallery">
+                    <a target="_blank" href="{% url 'serial-killers' %}">
+                      <img src="{% static 'media/categories/seki.jpg' %}" alt="Serial Killers" width="600" height="400">
+                    </a>
+                    <div class="desc">Serial Killers</div>
+                  </div>
+                </div>
+                <div class="responsive">
+                 <div class="gallery">
+                   <a target="_blank" href="{% url 'unexplained-disappearances' %}">
+                     <img src="{% static 'media/categories/undi.jpg' %}" alt="Unexplained Disappearances" width="600" height="400">
+                   </a>
+                   <div class="desc">Unexplained Disappearances</div>
+                 </div>
+               </div>
+               </div>
+               <div class="row center">
+               <div class="responsive">
+                <div class="gallery">
+                  <a target="_blank" href="{% url 'stones-and-statues' %}">
+                    <img src="{% static 'media/categories/stst.jpg' %}" alt="Stones and Statues" width="600" height="400">
+                  </a>
+                  <div class="desc">Stones and Statues</div>
+                </div>
+              </div>
+              <div class="responsive">
+               <div class="gallery">
+                 <a target="_blank" href="{% url 'treasures' %}">
+                   <img src="{% static 'media/categories/tr.jpg' %}" alt="Treasures" width="600" height="400">
+                 </a>
+                 <div class="desc">Treasures</div>
+               </div>
+             </div>
+             <div class="responsive">
+              <div class="gallery">
+                <a target="_blank" href="{% url 'shipwrecks' %}">
+                  <img src="{% static 'media/categories/ship.jpg' %}" alt="Shipwrecks" width="600" height="400">
+                </a>
+                <div class="desc">Shipwrecks</div>
+              </div>
+            </div>
+            <div class="responsive">
+             <div class="gallery">
+               <a target="_blank" href="{% url 'extra-terrestrial' %}">
+                 <img src="{% static 'media/categories/et.jpg' %}" alt="Extra-Terrestrial" width="600" height="400">
+               </a>
+               <div class="desc">Extra-Terrestrial</div>
+             </div>
+           </div>
+           </div>
+           <div class="row center">
+           <div class="responsive">
+            <div class="gallery">
+              <a target="_blank" href="{% url 'monsters' %}">
+                <img src="{% static 'media/categories/mon.jpg' %}" alt="Monsters" width="600" height="400">
+              </a>
+              <div class="desc">Monsters</div>
+            </div>
+          </div>
+          <div class="responsive">
+           <div class="gallery">
+             <a target="_blank" href="{% url 'ghosts' %}">
+               <img src="{% static 'media/categories/ghos.jpg' %}" alt="Ghosts" width="600" height="400">
+             </a>
+             <div class="desc">Ghosts</div>
+           </div>
+         </div>
+         <div class="responsive">
+          <div class="gallery">
+            <a target="_blank" href="{% url 'incidents' %}">
+              <img src="{% static 'media/categories/inc.jpg' %}" alt="Incidents" width="600" height="400">
+            </a>
+            <div class="desc">Incidents</div>
+          </div>
+        </div>
+        <div class="responsive">
+         <div class="gallery">
+           <a target="_blank" href="{% url 'egyptian-mysteries' %}">
+             <img src="{% static 'media/categories/egy.jpg' %}" alt="Egyptian Mysteries" width="600" height="400">
+           </a>
+           <div class="desc">Egyptian Mysteries</div>
+         </div>
+       </div>
+</div>
+
+                      <div class="clearfix"></div>
+                   </div>
+               </div>
+           </div>
+
+    <!--Subscribe-->
+    <div class="v-parallax v-bg-stylish v-bg-stylish-v10" id="download" style="background-image: url({% static 'media/29920.jpg' %});">
+      <div class="container">
+        <div class="row center">
+          <div class="col-sm-12">
+            <div class="v-content-wrapper">
+                <p class="v-smash-text-large-2x">
+                    <span>Subscribe Now!</span>
+                </p>
+                <div class="v-spacer col-sm-12 v-height-small"></div>
+                <form class="subscription-form form-inline" method="POST">
+                    {% csrf_token %}
+                    <input type="email" name="EMAIL" placeholder="Your Email" class="subscriber-email form-control input-box">
+                    <input type="submit" value="Subscribe" class="subscriber-button btn v-btn v-medium-button no-three-d v-belize-hole">
+                </form>
+            </div>
+          </div>
+          <div class="v-bg-overlay overlay-colored"></div>
+        </div>
+      </div>
+    </div>
+    <!--End Subscribe-->
+{% endblock %}

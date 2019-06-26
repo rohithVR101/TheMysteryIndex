@@ -1,0 +1,40 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+  <!--Posts-->
+  <div class="v-parallax v-bg-stylish v-bg-stylish-v10" id="download" style="background-image: url({% static img %});">
+    <div class="container">
+      <div class="row center">
+        <div class="col-sm-12">
+            <div class="v-content-wrapper">
+                    <p class="v-smash-text-large-2x">
+                        <span>{{title}}</span>
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="v-parallax v-bg-stylish v-bg-stylish-v4 no-shadow" id="posts">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                    <div class="horizontal-break"></div>
+                <div class="v-spacer col-sm-12 v-height-standard"></div>
+                {% for post in post_list %}
+                    <div class="post">
+
+                        <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+                        <div class="date">
+                            <p>Published on: {{ post.published_date|date:"D M Y"}}</p>
+                        </div>
+                        <a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.approve_comments.count }}</a>
+                    </div>
+                {% endfor %}
+            </div>
+          </div>
+        </div>
+    </div>
+    <!--End Posts-->
+
+{% endblock %}

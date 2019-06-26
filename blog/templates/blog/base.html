@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>The Mystery Index - Home</title>
+    <meta name="keywords" content="The Mystery Index" />
+    <meta name="description" content="The home to world's all mysteries">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {# Favicon #}
+    <link rel="shortcut icon" type="image/png" href="{% static 'media/favicon.ico'%}" />
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'media/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'media/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'media/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'media/site.webmanifest' %}">
+
+    {# MEDIUM STYLE EDITOR #}
+    <script src="//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+
+    {# Web Fonts #}
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Pacifico|Raleway&display=swap" rel="stylesheet">
+
+    {# Libs CSS #}
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/v-nav-menu.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/v-animation.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/v-bg-stylish.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/v-shortcodes.css' %}" rel="stylesheet" />
+    <link href="{% static 'css/theme-responsive.css' %}" rel="stylesheet" />
+    <link href="{% static 'plugins/owl-carousel/owl.theme.css' %}" rel="stylesheet" />
+    <link href="{% static 'plugins/owl-carousel/owl.carousel.css' %}" rel="stylesheet" />
+
+    {# Current Page CSS #}
+    <link href="{% static 'plugins/rs-plugin/css/settings.css' %}" rel="stylesheet" />
+    <link href="{% static 'plugins/rs-plugin/css/custom-captions.css' %}" rel="stylesheet" />
+
+    {# Custom CSS #}
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+
+    <style>
+      label{
+        font-weight: bold;
+      }
+      .helptext{
+        font-size: 13px;
+      }
+      div.gallery {
+        border: 1px solid white;
+      }
+
+      div.gallery:hover {
+        border: 1px solid #777;
+      }
+
+      div.gallery img {
+        width: 100%;
+        height: auto;
+      }
+
+      div.desc {
+        padding: 15px;
+        text-align: center;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .responsive {
+        padding: 0 6px;
+        float: left;
+        width: 24.99999%;
+      }
+
+      @media only screen and (max-width: 700px) {
+        .responsive {
+          width: 49.99999%;
+          margin: 6px 0;
+        }
+      }
+
+      @media only screen and (max-width: 500px) {
+        .responsive {
+          width: 100%;
+        }
+      }
+
+      .clearfix:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+</style>
+</head>
+
+<body class="no-page-top">
+
+    <!--Header-->
+    <header class="header" data-bg-color="rgba(9, 103, 139, 0.36)" data-font-color="#fff">
+      <div class="container">
+        <div class="logo">
+          <a href="{% url 'index' %}" style="font-family: 'Pacifico', cursive; font-size: 28px">
+              The Mystery Index
+          </a>
+        </div>
+
+        <div class="navbar-collapse nav-main-collapse collapse">
+
+                <!-- Header Search
+                <div class="search" id="headerSearch">
+                    <a href="#" id="headerSearchOpen"><i class="fa fa-search"></i></a>
+                    <div class="search-input">
+                        <form id="headerSearchForm" action="#" method="get">
+                            <div class="input-group">
+                                <input type="text" class="form-control search" name="q" id="q" placeholder="Search...">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-primary" type="button"><i class="fa fa-search"></i></button>
+                                </span>
+                            </div>
+                        </form>
+                        <span class="v-arrow-wrap"><span class="v-arrow-inner"></span></span>
+                    </div>
+                </div>
+                End Header Search -->
+
+                <!--Main Menu-->
+          <nav class="nav-main mega-menu one-page-menu">
+            <ul class="nav nav-pills nav-main" id="mainMenu">
+                <li>
+                    <a data-hash href="{% url 'post_list' %}">All</a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle menu-icon" href="#"></i>Places <i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'mysterious-places' %}">Mysterious Places</a></li>
+                        <li><a href="{% url 'ancient-cities' %}">Ancient Cities</a></li>
+                        <li><a href="{% url 'legendary-places' %}">Legendary Places</a></li>
+                        <li><a href="{% url 'uninhabited-islands' %}">Uninhabited Islands</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle menu-icon" href="#"></i>People <i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'bizarre-people' %}">Bizarre People</a></li>
+                        <li><a href="{% url 'murders' %}">Murders</a></li>
+                        <li><a href="{% url 'serial-killers' %}">Serial Killers</a></li>
+                        <li><a href="{% url 'unexplained-disappearances' %}">Unexplained Disappearances</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle menu-icon" href="#"></i>Things <i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'stones-and-statues' %}">Stones and Statues</a></li>
+                        <li><a href="{% url 'treasures' %}">Treasures</a></li>
+                        <li><a href="{% url 'shipwrecks' %}">Shipwrecks</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a data-hash href="{% url 'extra-terrestrial' %}"></i>Extra-Terrestrial</a>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle menu-icon" href="#"></i>Others <i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'monsters' %}">Monsters</a></li>
+                        <li><a href="{% url 'ghosts' %}">Ghosts</a></li>
+                        <li><a href="{% url 'incidents' %}">Incidents</a></li>
+                        <li><a href="{% url 'egyptian-mysteries' %}">Egyptian Mysteries</a></li>
+                    </ul>
+                </li>
+                {% if user.is_authenticated %}
+                <li class="dropdown">
+                    <a class="dropdown-toggle menu-icon" href="#"></i>Welcome: {{ user.username }} <i class="fa fa-caret-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{% url 'post_new' %}">New Post</a></li>
+                        <li><a href="{% url 'post_draft_list' %}">Drafts</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a data-hash href="{% url 'logout' %}"></i>Logout</a>
+                </li>
+                {% else %}
+                <li>
+                    <a data-hash href="{% url 'login' %}"></i>Login</a>
+                </li>
+                {% endif %}
+            </ul>
+          </nav>
+          <!--End Main Menu-->
+        </div>
+        <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+      </div>
+    </header>
+    <!--End Header-->
+
+	  {% block content %}
+
+
+    {% endblock %}
+
+    <!--Footer-Wrap-->
+    <div class="footer-wrap">
+        <div class="copyright">
+            <div class="container">
+                <p>© Copyright 2019 by TMI. All Rights Reserved. | Site made by Rohith Adithya</p>
+                <nav class="footer-menu std-menu">
+                    <ul class="menu">
+                        <li><a href="{% url 'about' %}">About</a></li>
+                        <li><a href="{% url 'admin:index' %}">Admin</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--End Footer-Wrap-->
+
+    <!--// BACK TO TOP //-->
+    <div id="back-to-top" class="animate-top"><i class="fa fa-angle-up"></i></div>
+
+    <!-- Libs -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.flexslider-min.js"></script>
+    <script src="js/jquery.easing.js"></script>
+    <script src="js/jquery.fitvids.js"></script>
+    <script src="js/jquery.carouFredSel.min.js"></script>
+    <script src="js/theme-plugins.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/imagesloaded.js"></script>
+
+    <script src="js/view.min.js?auto"></script>
+
+    <script src="plugins/rs-plugin/js/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/rs-plugin/js/jquery.themepunch.revolution.min.js"></script>
+
+    <script src="js/theme-core.js"></script>
+
+</body>
+</html>

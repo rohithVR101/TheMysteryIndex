@@ -1,0 +1,25 @@
+{% extends 'blog/base.html' %}
+
+
+{% block content %}
+<section class="visual">
+  <div class="container">
+      <div class="jumbotron">
+
+    <h2>Please Sign-up: </h2>
+    <h3>(Must be SuperUser, please check admin for issues.)</h3>
+
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class='btn btn-primary' type="submit">Sign up</button>
+  </form>
+    <br>
+    <br>
+    <br>
+    <p>Already an user?</p>
+    <a class='btn btn-primary' href="{% url 'signup' %}"> LOG IN NOW!</a>
+  </div>
+  </div>
+  </section>
+{% endblock %}
