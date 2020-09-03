@@ -1,0 +1,2 @@
+A Django-based blog that has user contributed posts about Mysteries. It's currently hosted at PythonAnywhere
+A Django-based blog that has user contributed posts about Mysteries. It's currently hosted at PythonAnywhere
