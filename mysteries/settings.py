@@ -25,7 +25,7 @@ SECRET_KEY = '^6unb-_v68$ayo*8+@c!9vmf2iw)p9vkjlr=+cjpyrm%w0+a_z'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['mrroboto101.pythonanywhere.com']
 
 
 # Application definition
